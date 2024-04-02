@@ -1,4 +1,4 @@
-{%- assign posts = paginator.posts | default: site.posts | where: 'category', 'your_category_name' -%}
+{%- assign posts = paginator.posts | default: site.posts | where: category, include.title -%}
 {% for post in posts %}
   <article>
     {% include meta.html post=post preview=true %}
